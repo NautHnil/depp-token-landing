@@ -1,0 +1,300 @@
+//
+// Color system
+//
+
+$black: #000000;
+$white: #ffffff;
+
+// DEPPTOKEN.IO
+$suv-main-red: #ff4343;
+$suv-main-red-hover: #ff6060;
+$suv-main-red-light: #ff7777;
+$suv-main-orange: #ffa14a;
+$suv-main-yellow: #ffac20;
+
+$suv-main-gradient: linear-gradient(
+  307.46deg,
+  $suv-main-red 0%,
+  $suv-main-red-light 95.66%
+);
+$suv-main-gradient-reverse: linear-gradient(
+  307.46deg,
+  $suv-main-red-light 0%,
+  $suv-main-red 95.66%
+);
+
+$suv-main-blue: #0d7bed;
+$suv-main-blue-light: #1ea2f1;
+
+$suv-text-primary: #272a5d;
+$suv-text-secondary: #686a8e;
+$suv-text-third: #a9aabe;
+$suv-text-place-holder: #9d9d9d;
+$suv-divider-1: #d8d8d8;
+$suv-divider-2: #eaeaea;
+$suv-divider-3: #ededed;
+$suv-divider-4: #eaeaef;
+
+$suv-custom-1: #e25c00;
+$suv-custom-2: #fafafa;
+$suv-custom-3: #fff2e9;
+$suv-custom-4: #107ae7;
+$suv-custom-5: #2992ff;
+$suv-custom-6: #00a3ff;
+$suv-custom-7: #f3f5f8;
+
+$arr-colors-name: (
+  "suv-main-red": $suv-main-red,
+  "suv-main-orange": $suv-main-orange,
+  "suv-main-yellow": $suv-main-yellow,
+  "suv-text-primary": $suv-text-primary,
+  "suv-text-secondary": $suv-text-secondary,
+  "suv-text-third": $suv-text-third,
+  "suv-text-place-holder": $suv-text-place-holder,
+  "suv-divider-1": $suv-divider-1,
+  "suv-divider-2": $suv-divider-2,
+  "suv-custom-1": $suv-custom-1,
+  "suv-custom-2": $suv-custom-2,
+  "suv-custom-3": $suv-custom-3,
+  "suv-custom-4": $suv-custom-4,
+  "suv-custom-5": $suv-custom-5,
+  "suv-custom-6": $suv-custom-6,
+  "suv-custom-7": $suv-custom-7,
+  "suv-divider-4": $suv-divider-4,
+  "suv-main-blue": $suv-main-blue,
+  "suv-main-blue-light": $suv-main-blue-light,
+);
+$arr-colors-name: map-merge((), $arr-colors-name);
+
+$theme-colors: ();
+$theme-colors: map-merge((), $theme-colors);
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-bg-level: 0;
+$alert-border-level: 0;
+$alert-color-level: 10;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $suv-text-primary;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $suv-main-orange;
+$link-decoration: none;
+$link-hover-color: darken($suv-main-red, 5%);
+$link-hover-decoration: none;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sf-pro-text: "SF-Pro-Text", $font-family-sans-serif;
+$font-family-base: $font-family-sf-pro-text;
+
+$arr-font-family: (
+  "font-family-sf-pro-text": $font-family-sf-pro-text,
+);
+$arr-font-family: map-merge((), $arr-font-family);
+
+// stylelint-enable value-keyword-case
+$spacer: 1rem;
+$spacer-px: 1px;
+$font-root: 16;
+$font-size-root: ($font-root * $spacer-px);
+$font-size-base: 1rem;
+$font-size-lg: calc(36 / $font-root * $spacer);
+$font-size-sm: calc(12 / $font-root * $spacer);
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$arr-font-weight: ();
+$arr-font-weight: map-merge(
+  (
+    "normal": $font-weight-normal,
+    "medium": $font-weight-medium,
+    "bold": $font-weight-bold,
+  ),
+  $arr-font-weight
+);
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+$h1-font-size: calc(60 / $font-root * $spacer); // 60px
+$h2-font-size: calc(48 / $font-root * $spacer); // 48px
+$h3-font-size: calc(36 / $font-root * $spacer); // 36px
+$h4-font-size: calc(32 / $font-root * $spacer); // 32px
+$h5-font-size: calc(28 / $font-root * $spacer); // 28px
+$h6-font-size: calc(24 / $font-root * $spacer); // 24px
+
+$arr-font-size: ();
+$arr-font-size: map-merge(
+  (
+    0: calc(0 / $font-root * $spacer),
+    10: calc(10 / $font-root * $spacer),
+    11: calc(11 / $font-root * $spacer),
+    12: calc(12 / $font-root * $spacer),
+    13: calc(13 / $font-root * $spacer),
+    14: calc(14 / $font-root * $spacer),
+    16: calc(16 / $font-root * $spacer),
+    18: calc(18 / $font-root * $spacer),
+    20: calc(20 / $font-root * $spacer),
+    24: $h6-font-size,
+    28: $h5-font-size,
+    30: calc(30 / $font-root * $spacer),
+    32: $h4-font-size,
+    36: $h3-font-size,
+    40: calc(40 / $font-root * $spacer),
+    48: $h2-font-size,
+    50: calc(50 / $font-root * $spacer),
+    60: $h1-font-size,
+    80: calc(80 / $font-root * $spacer),
+    160: calc(160 / $font-root * $spacer),
+  ),
+  $arr-font-size
+);
+
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.2;
+
+$arr-line-height: ();
+$arr-line-height: map-merge(
+  (
+    "1": 1,
+    "base": $line-height-base,
+    "2": 2,
+  ),
+  $arr-line-height
+);
+
+// Size margin, padding
+
+$mp: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$mp: map-merge(
+  (
+    -50: calc(-50 / $font-root * $spacer),
+    -15: calc(-15 / $font-root * $spacer),
+    -10: calc(-10 / $font-root * $spacer),
+    0: 0,
+    1: calc($spacer * 0.25),
+    2: calc($spacer * 0.5),
+    3: $spacer,
+    4: calc($spacer * 1.5),
+    5: calc($spacer * 3),
+    10: calc(10 / $font-root * $spacer),
+    12: calc(12 / $font-root * $spacer),
+    15: calc(15 / $font-root * $spacer),
+    16: calc(16 / $font-root * $spacer),
+    18: calc(18 / $font-root * $spacer),
+    20: calc(20 / $font-root * $spacer),
+    24: calc(24 / $font-root * $spacer),
+    25: calc(25 / $font-root * $spacer),
+    30: calc(30 / $font-root * $spacer),
+    40: calc(40 / $font-root * $spacer),
+    50: calc(50 / $font-root * $spacer),
+    60: calc(60 / $font-root * $spacer),
+    70: calc(70 / $font-root * $spacer),
+    80: calc(80 / $font-root * $spacer),
+    90: calc(90 / $font-root * $spacer),
+    100: calc(100 / $font-root * $spacer),
+    105: calc(105 / $font-root * $spacer),
+    210: calc(210 / $font-root * $spacer)
+  ),
+  $mp
+);
+
+$sizes: ();
+$sizes: map-merge(
+  (
+    0: 0,
+    5: 5%,
+    10: 10%,
+    15: 15%,
+    20: 20%,
+    25: 25%,
+    30: 30%,
+    35: 35%,
+    40: 40%,
+    45: 45%,
+    50: 50%,
+    55: 55%,
+    60: 60%,
+    65: 65%,
+    70: 70%,
+    75: 75%,
+    80: 80%,
+    85: 85%,
+    90: 90%,
+    95: 95%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
+);
+
+$border-color: $suv-divider-4;
+
+$border-radius: calc(4 / $font-root * $spacer);
+$border-radius-md: calc(10 / $font-root * $spacer);
+$border-radius-lg: calc(16 / $font-root * $spacer);
+$border-radius-sm: calc(2 / $font-root * $spacer);
+
+$box-shadow-sm: 0px 4px 10px rgba($black, 0.08);
+$box-shadow: 0px 4px 30px rgba($suv-text-primary, 0.1);
+$box-shadow-lg: 0px 4px 40px rgba($suv-text-primary, 0.12);
+
+$grid-gutter-width: 30px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+);
+
+// Badges
+
+$badge-font-size: calc(12 / $font-root * $spacer);
+$badge-font-weight: $font-weight-medium;
+$badge-padding-y: calc(2 / $font-root * $spacer);
+$badge-padding-x: calc(10 / $font-root * $spacer);
+$badge-border-radius: $border-radius-sm;
+
+$badge-pill-padding-x: 0.6em;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius: 10rem;
+
+// Form validation
+
+// FontAwesome
+
+$fa-font-path: "../fonts/fontawesome/";
+$fa-font-size-base: $font-size-base;
+
+//
+// Root
+//
+
+$header: calc(60 / $font-root * $spacer);
+$header-sm: calc(50 / $font-root * $spacer);

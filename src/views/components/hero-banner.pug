@@ -1,0 +1,19 @@
+//- Hero banner
+include ../stores/tbHero
+include ./heading
+
+each hero in tbHero
+  .suv-hero
+    .suv-hero__wrap(style=`background-image: url(${hero.bgBanner});`)
+      .suv-hero__wrap-main.py-70.py-lg-210
+        .container
+          .row.align-items-center
+            .col-md-6.order-md-last
+              .suv-hero__image.text-center.mb-30.mb-md-0.px-50.px-lg-0(data-waypoints="init", data-effect="zoomIn")
+                img(src=hero.image, alt=hero.title)
+
+            .col-md-6.order-md-first
+              .suv-hero__content.text-center.text-md-left(data-waypoints="init", data-effect="zoomIn")
+                +heading(`suv-heading--no-line text-white text-center text-md-left${hero.desc ? " mb-30 mb-md-3 mb-lg-30" : ""}`, hero.title, `fs-40 fs-md-32 fs-lg-50${hero.desc ? " mb-10" : " mb-0"}`)
+                - if (hero.desc)
+                  .font-weight-medium.text-white !{hero.desc}

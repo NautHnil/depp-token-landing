@@ -1,0 +1,56 @@
+.suv-section {
+  overflow: hidden;
+}
+
+#go-top {
+  z-index: 1000;
+  cursor: pointer;
+  //box-shadow: 0 8px 26px rgba($suv-main-red, 0.16);
+
+  @include fixed(null, 16px, 90px);
+  @include rem((
+    width: 54px,
+    height: 54px,
+  ));
+  @include transition(all .5s ease);
+  @include vhidden();
+  @include media-breakpoint-up(md) {
+    right: 54px;
+    bottom: 150px;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 30px rgba($suv-main-red, 0.3);
+  }
+
+  &.show {
+    @include vdisplay();
+  }
+}
+
+[data-waypoints="init"]:not(.animated) {
+  @include vhidden();
+}
+
+.working-view {
+  &__box {
+    @include rem((
+      min-width: 943px,
+    ));
+  }
+
+  &__item {
+    img {
+      @include rem((
+        width: 34px,
+        height: 22px,
+      ));
+    }
+  }
+
+  &__wrap {
+    @include rem((
+      width: 200px,
+    ));
+  }
+}

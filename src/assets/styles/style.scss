@@ -1,0 +1,41 @@
+// Import variables
+@import "variables";
+
+// Import fonts
+@import "font";
+
+// Import libraries
+@import "libraries/bootstrap-4.4.1/bootstrap";
+
+@import "libraries/fontawesome-5.13.0/scss/fontawesome";
+@import "libraries/fontawesome-5.13.0/scss/brands";
+@import "libraries/fontawesome-5.13.0/scss/regular";
+@import "libraries/fontawesome-5.13.0/scss/solid";
+@import "libraries/fontawesome-5.13.0/scss/v4-shims";
+
+// Import mixins
+@import "mixins";
+
+// Base
+@import "base/reset";
+@import "base/button";
+
+// Layouts
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/main";
+@import "layouts/footer";
+@import "layouts/404";
+
+// Page
+
+// Components: Font icons of website
+
+// Components: Shortcode
+@import "components/heading";
+@import "components/hero";
+@import "components/about";
+@import "components/box";
+@import "components/crypto-exchange";
+@import "components/platform-roadmap";
+@import "components/utils";

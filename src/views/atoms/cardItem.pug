@@ -1,0 +1,11 @@
+//- Card Item
+mixin cardItem(modifyClass, bodyClass, image, imgClass, title, titleClass, desc, descClass)
+  .card(class=modifyClass)
+    if image
+      img.card-img-top(class=imgClass, src=image, alt=title)
+    if title || desc
+      .card-body(class=bodyClass)
+        if title
+          h3.card-title(class=titleClass)= title
+        if desc
+          .card-text(class=descClass)= desc

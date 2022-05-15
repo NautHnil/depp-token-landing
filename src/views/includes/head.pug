@@ -1,0 +1,53 @@
+//- Head
+include ../stores/tbHead
+
+//- Meta
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+//- SEO
+
+//- Basic SEO
+block basicSeo
+  meta(name="description" content=tbHead.description)
+  meta(name="keywords", content=tbHead.keywords)
+  meta(name="author" content="dotBraind")
+
+//- Twitter
+meta(name="twitter:card", content=tbHead.description)
+meta(name="twitter:site", content=tbHead.site)
+meta(name="twitter:image", content=tbHead.image)
+meta(name="twitter:description", content=tbHead.description)
+
+//- Facebook
+meta(property="og:url", content=tbHead.site)
+meta(property="og:title", content=tbHead.title)
+meta(property="og:description", content=tbHead.description)
+meta(property="og:image", content=tbHead.image)
+meta(property="og:type", content="website")
+
+//- Google Search Console
+//- meta(name="google-site-verification", content="qmr7toxbY_5TpSgJGJ106tLM2hiMd7HmCY0v1CPaGyo")
+
+//- Favicon
+link(rel="apple-touch-icon", sizes="180x180", href="./assets/images/favicon/favicon-180.png")
+link(rel="icon", type="image/png", sizes="32x32", href="./assets/images/favicon/favicon-32.png")
+link(rel="icon", type="image/png", sizes="16x16", href="./assets/images/favicon/favicon-16.png")
+link(rel="shortcut icon", href="./assets/images/favicon/favicon.ico")
+
+//- Font
+//- link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap", rel='stylesheet')
+
+//- Title
+block title
+  title DEPPTOKEN Platform for Short-term Leverage Trading
+
+//- Stylesheet
+link(rel='stylesheet', href='./assets/libraries/animate/animate.css')
+link(rel='stylesheet', href='./assets/css/style.css')
+
+//- JS
+script(src='./assets/libraries/common/modernizr.min.js')
+script(src='./assets/libraries/common/jquery.min.js')
+script(src='./assets/libraries/common/fastclick.min.js')

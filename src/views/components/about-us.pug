@@ -1,0 +1,25 @@
+//- About us
+include ../stores/tbAboutUs
+include ./heading
+
+each about in tbAboutUs
+  .suv-about.py-70.py-xl-100
+    .container
+      .row.justify-content-center
+        .col-lg-10.col-xl-9
+          .suv-about__content.mb-30.mb-lg-60(data-waypoints="init", data-effect="fadeInLeft")
+            +heading("text-center mb-30", about.title, "text-capitalize fs-40 fs-md-32 fs-lg-50 mb-10")
+            .text-md-center= about.desc
+
+      .row.justify-content-center
+        .col-md-9.col-lg-8.col-xl-6
+          .suv-about__whitepaper.shadow-lg.rounded-lg.border.p-30.px-md-3.py-md-4.p-lg-30.d-flex.flex-column.flex-md-row.align-items-center(data-waypoints="init", data-effect="fadeInRight")
+            .suv-about__whitepaper-header.d-flex.align-items-center.mb-30.mb-md-0.mr-auto
+              img.mr-20(src=about.pdfData.image, alt=about.pdfData.title)
+              div
+                h2.suv-about__whitepaper-title.fs-24.mb-0= about.pdfData.title
+                div= about.pdfData.desc
+            .suv-about__whitepaper-content.text-center
+              div
+                a.btn.btn-suv.btn-gradient(href=about.pdfData.url, target="blank")
+                  span White paper

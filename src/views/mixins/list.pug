@@ -1,0 +1,7 @@
+mixin list(values, modifyClass, icon)
+  ul.list-unstyled(class=modifyClass)
+    each content in values
+      li
+        if icon
+          i(class=icon, aria-hidden=true)
+        span.align-middle= content

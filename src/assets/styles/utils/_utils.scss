@@ -1,0 +1,91 @@
+// Visually hidden element.
+@mixin vhidden() {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Visually display element.
+@mixin vdisplay() {
+  opacity: 1;
+  visibility: visible;
+}
+
+// FontAwesome
+%fa {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900 !important;
+
+  @extend %fa-icon;
+}
+
+%far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400 !important;
+
+  @extend %fa-icon;
+}
+
+%fa-brand {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 400 !important;
+
+  @extend %fa-icon;
+}
+
+// FontUI1
+@mixin fui-icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: -.125em;
+}
+
+%fui {
+  font-family: "Fonticonui1";
+
+  @include fui-icon;
+}
+
+// Box shadow
+%shadow {
+  box-shadow: 2px 2px 10px rgba($black, 0.2);
+}
+
+// Overlay background
+@mixin overlay($bg: black, $alpha: 0.5, $z-index: 5) {
+  @include absolute(0,0,0,0);
+  background-color: rgba($bg, $alpha);
+  z-index: $z-index;
+}
+
+// PADDING TOP IMAGE
+@mixin paddingTop($width, $height) {
+  content: "";
+  display: block;
+  padding-top: percentage($height/$width);
+}
+
+// THEMES OPTION
+@mixin themify($themes: $themes-v2) {
+  @each $theme, $map in $themes {
+
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

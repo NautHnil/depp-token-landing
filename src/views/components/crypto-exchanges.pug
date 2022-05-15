@@ -1,0 +1,15 @@
+//- Crytocurrency Exchanges
+include ../stores/tbCryptoExchanges
+include ./heading
+
+.suv-crypto.py-70.py-xl-100
+  .container
+    div(data-waypoints="init", data-effect="fadeInUp")
+      +heading("text-center mb-50 mb-lg-60", "Crytocurrency Exchanges", "text-capitalize fs-40 fs-md-32 fs-lg-50 mb-10", "Popular Cryptocurrency Exchanges")
+
+    .suv-crypto__content
+      .suv-crypto__grid.text-center
+        each item in tbCryptoExchanges
+          .suv-crypto__item(data-waypoints="init", data-effect="fadeInRight")
+            .suv-crypto__image.rounded-lg.shadow
+              img(src=item.image, alt=item.title)

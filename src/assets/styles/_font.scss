@@ -1,0 +1,128 @@
+// @ Font-face
+$sf-pro-text-font-path: "/assets/fonts/sf-pro-text";
+
+// Font-size 200 / Ultra Light
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 200;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Ultralight.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Ultralight.ttf') format('ttf');
+}
+
+// Font-size 200 / Ultra Light Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 200;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-UltralightItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-UltralightItalic.ttf') format('ttf');
+}
+
+// Font-size 300 / Light
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Light.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Light.ttf') format('ttf');
+}
+
+// Font-size 300 / Light Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 300;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-LightItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-LightItalic.ttf') format('ttf');
+}
+
+// Font-size 400 / Regular
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Regular.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Regular.ttf') format('ttf');
+}
+
+// Font-size 400 / Regular Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 400;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-RegularItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-RegularItalic.ttf') format('ttf');
+}
+
+// Font-size 500 / Medium
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Medium.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Medium.ttf') format('ttf');
+}
+
+// Font-size 500 / Medium Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 500;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-MediumItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-MediumItalic.ttf') format('ttf');
+}
+
+// Font-size 600 / Semibold
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Semibold.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Semibold.ttf') format('ttf');
+}
+
+// Font-size 600 / Semibold Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 600;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-SemiboldItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-SemiboldItalic.ttf') format('ttf');
+}
+
+// Font-size 700 / Bold
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Bold.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Bold.ttf') format('ttf');
+}
+
+// Font-size 700 / Bold Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 700;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-BoldItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-BoldItalic.ttf') format('ttf');
+}
+
+// Font-size 800 / Black
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: normal;
+  font-weight: 800;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-Black.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-Black.ttf') format('ttf');
+}
+
+// Font-size 800 / Black Italic
+@font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: italic;
+  font-weight: 800;
+  src: url('#{$sf-pro-text-font-path}/woff/SFProText-BlackItalic.woff') format('woff'),
+  url('#{$sf-pro-text-font-path}/tff/SFProText-BlackItalic.ttf') format('ttf');
+}

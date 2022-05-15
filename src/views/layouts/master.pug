@@ -1,0 +1,27 @@
+//- Master layout
+
+doctype html
+html(lang="en")
+  head
+
+    //- Head
+    block head
+      include ../includes/head
+
+  body
+    #site
+      //- Header
+      block header
+        include ../includes/header
+
+      //- Content
+      main#main.site-main(role="main")
+        block content
+
+      //- Footer
+      block footer
+        include ../includes/footer
+
+    //- Scripts
+    block scripts
+      include ../includes/scripts

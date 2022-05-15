@@ -1,0 +1,10 @@
+//- Navigation
+include ../stores/tbNavigation
+
+#navbarSupportedContent.collapse.navbar-collapse
+  ul.navbar-nav.bg-white.ml-auto
+    each nav in tbNav
+      li.nav-item(class=`${nav.href === pageURL ? "active font-weight-bold" : ""}`)
+        a.nav-link(href=nav.href)= nav.title
+
+    //- include ./languages

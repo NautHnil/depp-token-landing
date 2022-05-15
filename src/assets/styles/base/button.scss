@@ -1,0 +1,24 @@
+.btn-suv {
+  font-weight: $font-weight-bold;
+  border-radius: 100rem;
+
+  @include rem((
+    padding: 12px 50px,
+  ));
+}
+
+.btn-gradient {
+  outline: none;
+  color: $white;
+  border-width: 1.5px;
+  border-color: $suv-main-red;
+  background: $suv-main-gradient;
+  box-shadow: 0 4px 16px rgba($suv-main-red, 0.3) !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+    background: $suv-main-gradient-reverse;
+  }
+}

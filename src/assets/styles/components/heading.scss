@@ -1,0 +1,82 @@
+.suv-heading {
+  &__title {
+    &::after {
+      content: "";
+      display: block;
+      background: $suv-divider-4;
+
+      @include rem((
+        width: 100px,
+        height: 4px,
+        margin-top: 15px,
+        margin-bottom: 20px,
+      ));
+    }
+  }
+
+  &.text-left {
+    .suv-heading__title {
+      &::after {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.text-center {
+    .suv-heading__title {
+      &::after {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &.text-right {
+    .suv-heading__title {
+      &::after {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--no-line {
+    .suv-heading__title::after {
+      display: none;
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      &.text#{$infix}-left {
+        .suv-heading__title {
+          &::after {
+            margin-right: auto;
+            margin-left: 0;
+          }
+        }
+      }
+
+      &.text#{$infix}-center {
+        .suv-heading__title {
+          &::after {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+
+      &.text#{$infix}-right {
+        .suv-heading__title {
+          &::after {
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

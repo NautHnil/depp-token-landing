@@ -1,0 +1,18 @@
+.suv-box {
+  background-color: $suv-custom-7;
+
+  &-card {
+    @include transition(all .25s ease);
+
+    &:hover {
+      box-shadow: $box-shadow-lg;
+    }
+
+    .card-img-top {
+      @include rem((
+        width: 72px,
+        height: 72px,
+      ));
+    }
+  }
+}

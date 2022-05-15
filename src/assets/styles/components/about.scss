@@ -1,0 +1,12 @@
+.suv-about {
+  &__whitepaper {
+    background-repeat: no-repeat;
+    background-position: 185% 115%;
+
+    img {
+      @include rem((
+        height: 72px,
+      ));
+    }
+  }
+}

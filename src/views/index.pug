@@ -1,0 +1,25 @@
+extends ./layouts/master.pug
+
+block title
+  title DEPPTOKEN Platform for Short-term Leverage Trading - DEPPTOKEN.IO
+
+  - var pageURL = "/";
+
+block content
+  section#hero.suv-section
+    include ./components/hero-banner
+
+  section#about-us.suv-section
+    include ./components/about-us
+
+  section#depptoken.suv-section
+    include components/suv
+
+  section#exchanges.suv-section
+    include ./components/crypto-exchanges
+
+  section#roadmap.suv-section
+    include ./components/platform-roadmap
+
+  section#token-economy.suv-section
+    include ./components/token-economy

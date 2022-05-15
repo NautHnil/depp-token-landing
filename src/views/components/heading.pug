@@ -1,0 +1,6 @@
+//- Heading
+mixin heading(modifyClass, title, titleClass, subTitle, subTitleClass)
+  .suv-heading(class=modifyClass)
+    h2.suv-heading__title(class=titleClass) !{title}
+    if subTitle
+      .suv-heading__meta(class=subTitleClass) !{subTitle}
