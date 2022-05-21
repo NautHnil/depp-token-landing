@@ -1,12 +1,14 @@
 //- Footer
 
 block footer
-  footer.border-top.py-20
+  footer.suv-footer.py-40.position-relative
     -
       var date = new Date;
       var dateY = date.getFullYear();
 
-    .text-center.fs-14 Copyright &copy; #{dateY} DEPPTOKEN Foundation. – All rights reserved
+    .suv-footer__element
+      .suv-footer__element-ellipse-1
+    .text-center.fs-14 Copyright &copy; #{dateY} DEPPTOKEN – All rights reserved
 
 block append footer
   include ../extras/go-top

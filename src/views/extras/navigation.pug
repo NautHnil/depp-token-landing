@@ -2,9 +2,9 @@
 include ../stores/tbNavigation
 
 #navbarSupportedContent.collapse.navbar-collapse
-  ul.navbar-nav.bg-white.ml-auto
+  ul.navbar-nav.ml-auto
     each nav in tbNav
       li.nav-item(class=`${nav.href === pageURL ? "active font-weight-bold" : ""}`)
-        a.nav-link(href=nav.href)= nav.title
+        a.nav-link.text-depp-light-70.text-hover-suv-main-red.fs-20(href=nav.href)= nav.title
 
     //- include ./languages

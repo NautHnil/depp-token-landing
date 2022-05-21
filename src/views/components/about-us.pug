@@ -3,23 +3,17 @@ include ../stores/tbAboutUs
 include ./heading
 
 each about in tbAboutUs
-  .suv-about.py-70.py-xl-100
+  .suv-about.pt-70.pt-xl-100
     .container
       .row.justify-content-center
         .col-lg-10.col-xl-9
           .suv-about__content.mb-30.mb-lg-60(data-waypoints="init", data-effect="fadeInLeft")
-            +heading("text-center mb-30", about.title, "text-capitalize fs-40 fs-md-32 fs-lg-50 mb-10")
+            +heading("text-center mb-30", about.title, "text-capitalize text-white fs-40 fs-md-32 fs-lg-50 mb-10")
             .text-md-center= about.desc
 
-      .row.justify-content-center
-        .col-md-9.col-lg-8.col-xl-6
-          .suv-about__whitepaper.shadow-lg.rounded-lg.border.p-30.px-md-3.py-md-4.p-lg-30.d-flex.flex-column.flex-md-row.align-items-center(data-waypoints="init", data-effect="fadeInRight")
-            .suv-about__whitepaper-header.d-flex.align-items-center.mb-30.mb-md-0.mr-auto
-              img.mr-20(src=about.pdfData.image, alt=about.pdfData.title)
-              div
-                h2.suv-about__whitepaper-title.fs-24.mb-0= about.pdfData.title
-                div= about.pdfData.desc
-            .suv-about__whitepaper-content.text-center
-              div
-                a.btn.btn-suv.btn-gradient(href=about.pdfData.url, target="blank")
-                  span White paper
+      .row
+        each data in about.listData
+          .col-md-6.col-lg-4.mb-5.mb-xl-80
+            .suv-about__item.p-4.bg-depp-light-08.rounded-lg.h-100(data-waypoints="init", data-effect="fadeInUp")
+              .suv-about__item-title.text-white.font-weight-semi-bold.fs-20.mb-3= data.title
+              .suv-about__item-desc= data.desc

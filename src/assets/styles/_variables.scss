@@ -6,6 +6,13 @@ $black: #000000;
 $white: #ffffff;
 
 // DEPPTOKEN.IO
+$depp-main: #11011e;
+$depp-main-light: lighten($depp-main, 10%);
+$depp-light-70: rgba(#fff, 0.7);
+$depp-light-08: rgba(#fff, 0.08);
+$depp-light-05: rgba(#fff, 0.05);
+$depp-pink: #d539c2;
+
 $suv-main-red: #ff4343;
 $suv-main-red-hover: #ff6060;
 $suv-main-red-light: #ff7777;
@@ -44,6 +51,13 @@ $suv-custom-6: #00a3ff;
 $suv-custom-7: #f3f5f8;
 
 $arr-colors-name: (
+  "depp-main": $depp-main,
+  "depp-main-light": $depp-main-light,
+  "depp-light-70": $depp-light-70,
+  "depp-light-08": $depp-light-08,
+  "depp-light-05": $depp-light-05,
+  "depp-pink": $depp-pink,
+
   "suv-main-red": $suv-main-red,
   "suv-main-orange": $suv-main-orange,
   "suv-main-yellow": $suv-main-yellow,
@@ -81,8 +95,8 @@ $alert-color-level: 10;
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white;
-$body-color: $suv-text-primary;
+$body-bg: #11011e;
+$body-color: #d2d2d2;
 
 // Links
 //
@@ -105,10 +119,12 @@ $link-hover-decoration: none;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-rubik: "Rubik", $font-family-sans-serif;
 $font-family-sf-pro-text: "SF-Pro-Text", $font-family-sans-serif;
-$font-family-base: $font-family-sf-pro-text;
+$font-family-base: $font-family-rubik;
 
 $arr-font-family: (
+  "font-family-rubik": $font-family-rubik,
   "font-family-sf-pro-text": $font-family-sf-pro-text,
 );
 $arr-font-family: map-merge((), $arr-font-family);
@@ -124,6 +140,7 @@ $font-size-sm: calc(12 / $font-root * $spacer);
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 $arr-font-weight: ();
@@ -131,6 +148,7 @@ $arr-font-weight: map-merge(
   (
     "normal": $font-weight-normal,
     "medium": $font-weight-medium,
+    "semi-bold": $font-weight-semi-bold,
     "bold": $font-weight-bold,
   ),
   $arr-font-weight
@@ -150,6 +168,7 @@ $arr-font-size: ();
 $arr-font-size: map-merge(
   (
     0: calc(0 / $font-root * $spacer),
+    8: calc(8 / $font-root * $spacer),
     10: calc(10 / $font-root * $spacer),
     11: calc(11 / $font-root * $spacer),
     12: calc(12 / $font-root * $spacer),
@@ -209,7 +228,9 @@ $mp: map-merge(
     20: calc(20 / $font-root * $spacer),
     24: calc(24 / $font-root * $spacer),
     25: calc(25 / $font-root * $spacer),
+    28: calc(28 / $font-root * $spacer),
     30: calc(30 / $font-root * $spacer),
+    32: calc(32 / $font-root * $spacer),
     40: calc(40 / $font-root * $spacer),
     50: calc(50 / $font-root * $spacer),
     60: calc(60 / $font-root * $spacer),
@@ -296,5 +317,5 @@ $fa-font-size-base: $font-size-base;
 // Root
 //
 
-$header: calc(60 / $font-root * $spacer);
+$header: calc(66 / $font-root * $spacer);
 $header-sm: calc(50 / $font-root * $spacer);

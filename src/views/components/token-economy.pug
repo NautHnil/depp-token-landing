@@ -5,27 +5,25 @@ include ./heading
 .suv-token.py-70.py-xl-100
   .container
     div(data-waypoints="init", data-effect="fadeInUp")
-      +heading("text-center mb-50 mb-lg-60", "Token Economy", "text-capitalize fs-40 fs-md-32 fs-lg-60 mb-10")
+      +heading("text-center mb-50 mb-lg-60", "Tokenomics", "text-capitalize text-white fs-40 fs-md-32 fs-lg-60 mb-10")
 
-    .suv-token__content
-      .row.justify-content-center
-        .col-md-9.col-lg-6
-          div(data-waypoints="init", data-effect="fadeInLeft")
-            h3.fs-24.mb-30.text-center Structure
+    .suv-token__content.position-relative
+      .suv-token__element
+        .suv-token__element-ellipse-1
+        .suv-token__element-ellipse-2
 
-            table.table.border.fs-14.mb-50.mb-lg-100
-              thead
-                tr.bg-suv-main-red.text-white
-                  th.font-weight-medium.border-bottom-0 Coin Name
-                  th.font-weight-medium.border-bottom-0 DEPP TOKEN
-              tbody
-                each item in tbTradingView
-                  tr
-                    td= item.coinName
-                    td= item.token
+      .row.mb-70.mb-lg-100
+        each info in tbTokenomics.infoData
+          .col-md-6.col-lg-3.mb-24
+            div.text-center.border.border-depp-light-05.py-24.px-3.rounded-lg(data-waypoints="init", data-effect="fadeInUp", style="backdrop-filter: blur(8px); background: rgba(255, 255, 255, 0.08);")
+              h3.fs-14.font-weight-normal.border-bottom.border-depp-light-05.pb-3= info.title
+              .font-weight-semi-bold.py-40= info.desc
 
-      .row.justify-content-center
-        .col-md-9.col-lg-8
-          div(data-waypoints="init", data-effect="fadeInRight")
-            h3.fs-24.mb-30.mb-lg-100.text-center Allocation
-            div.text-center: img(src="./assets/images/img-8.png", alt="Allocation")
+      .row
+        each poolInfo in tbTokenomics.poolData
+          .col-md-6.col-lg-3.mb-24
+            div(data-waypoints="init", data-effect="fadeInUp")
+              .text-center.position-relative
+                img(src=poolInfo.image, alt=poolInfo.label)
+                span.position-absolute.fs-40.font-weight-semi-bold(style="top: 50%; left: 50%; transform: translate(-50%, -50%)") #{poolInfo.value}%
+              .text-center.fs-20.mt-4= poolInfo.label

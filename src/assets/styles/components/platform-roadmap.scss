@@ -1,47 +1,48 @@
 .suv-platform {
-  background-color: $suv-custom-7;
+  background-color: transparent;
+
+  &__content {
+    counter-reset: roadmap;
+  }
 
   &__roadmap {
     position: relative;
-    background-color: $white;
-    background-repeat: no-repeat;
-    background-position: 195% bottom;
-    box-shadow: $box-shadow-lg;
+    counter-increment: roadmap;
 
-    @include transition(all .3s ease);
-    @include media-breakpoint-up(md) {
-      background-position: right bottom;
-    }
-    //@include media-breakpoint-up(lg) {
-    //  background-position: 195% 365%;
-    //}
-    @include media-breakpoint-up(lg) {
-      background-position: 150% 150%;
-    }
+    &-header {
+      background-image: url("../images/line.png");
+      background-repeat: no-repeat;
+      background-position: bottom left;
 
-    &:hover {
-      box-shadow: 0 4px 40px rgba($suv-main-red, 0.12);
+      h3::before {
+        content: "0" counter(roadmap);
+        font-weight: 400;
+        opacity: 0.1;
+
+        @include rem(
+          (
+            font-size: 96px,
+            margin-right: 12px,
+          )
+        );
+
+        @include media-breakpoint-up(lg) {
+          @include rem(
+            (
+              font-size: 120px,
+              margin-right: 24px,
+            )
+          );
+        }
+      }
     }
 
     ul li:not(:last-child) {
-      @include rem((
-        margin-bottom: 10px,
-      ));
-    }
-
-    &-icon {
-      transform: translateX(-50%);
-
-      @include absolute(0, null, null, 50%);
-      @include rem((
-        margin-top: -16px,
-      ));
-
-      img {
-        @include rem((
-          height: 33px,
-        ));
-      }
+      @include rem(
+        (
+          margin-bottom: 10px,
+        )
+      );
     }
   }
 }

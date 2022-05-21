@@ -1,6 +1,6 @@
-.suv-section {
-  overflow: hidden;
-}
+// .suv-section {
+//   overflow: hidden;
+// }
 
 #go-top {
   z-index: 1000;
@@ -8,11 +8,13 @@
   //box-shadow: 0 8px 26px rgba($suv-main-red, 0.16);
 
   @include fixed(null, 16px, 90px);
-  @include rem((
-    width: 54px,
-    height: 54px,
-  ));
-  @include transition(all .5s ease);
+  @include rem(
+    (
+      width: 54px,
+      height: 54px,
+    )
+  );
+  @include transition(all 0.5s ease);
   @include vhidden();
   @include media-breakpoint-up(md) {
     right: 54px;
@@ -34,23 +36,29 @@
 
 .working-view {
   &__box {
-    @include rem((
-      min-width: 943px,
-    ));
+    @include rem(
+      (
+        min-width: 943px,
+      )
+    );
   }
 
   &__item {
     img {
-      @include rem((
-        width: 34px,
-        height: 22px,
-      ));
+      @include rem(
+        (
+          width: 34px,
+          height: 22px,
+        )
+      );
     }
   }
 
   &__wrap {
-    @include rem((
-      width: 200px,
-    ));
+    @include rem(
+      (
+        width: 200px,
+      )
+    );
   }
 }

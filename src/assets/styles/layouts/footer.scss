@@ -1,0 +1,16 @@
+.suv-footer {
+  &__element {
+    &-ellipse-1 {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 1;
+      border-radius: 100%;
+      width: 675px;
+      height: 314px;
+      background: rgba(255, 0, 199, 0.2);
+      filter: blur(200px);
+      transform: translateX(-50%);
+    }
+  }
+}

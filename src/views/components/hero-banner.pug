@@ -1,19 +1,37 @@
 //- Hero banner
 include ../stores/tbHero
+include ../stores/tbAboutUs
 include ./heading
 
 each hero in tbHero
   .suv-hero
-    .suv-hero__wrap(style=`background-image: url(${hero.bgBanner});`)
+    .suv-hero__wrap
+      .suv-hero__element
+        .suv-hero__element-ellipse-1
+        .suv-hero__element-ellipse-2
+        .suv-hero__element-bg(style=`background-image: url(${hero.bgBanner});`)
       .suv-hero__wrap-main.py-70.py-lg-210
         .container
           .row.align-items-center
-            .col-md-6.order-md-last
-              .suv-hero__image.text-center.mb-30.mb-md-0.px-50.px-lg-0(data-waypoints="init", data-effect="zoomIn")
+            .col-lg-6.order-lg-last
+              .suv-hero__image.text-center.mb-30.mb-lg-0.px-50.px-lg-0(data-waypoints="init", data-effect="zoomIn")
                 img(src=hero.image, alt=hero.title)
 
-            .col-md-6.order-md-first
-              .suv-hero__content.text-center.text-md-left(data-waypoints="init", data-effect="zoomIn")
-                +heading(`suv-heading--no-line text-white text-center text-md-left${hero.desc ? " mb-30 mb-md-3 mb-lg-30" : ""}`, hero.title, `fs-40 fs-md-32 fs-lg-50${hero.desc ? " mb-10" : " mb-0"}`)
+            .col-lg-6.order-lg-first
+              .suv-hero__content.text-center.text-lg-left(data-waypoints="init", data-effect="zoomIn")
+                +heading(`suv-heading--no-line text-white text-center text-lg-left${hero.desc ? " mb-0" : ""}`, hero.title, `fs-32 fs-lg-50${hero.desc ? " mb-3 lg:mb-0" : " mb-0"}`)
                 - if (hero.desc)
                   .font-weight-medium.text-white !{hero.desc}
+
+                each about in tbAboutUs
+                  .suv-about__whitepaper.shadow-lg.rounded-lg.border.border-depp-light-70.mt-4.p-30.px-md-3.py-md-4.p-lg-30.d-flex.flex-column.flex-md-row.align-items-center(data-waypoints="init", data-effect="fadeInRight")
+                    .suv-about__whitepaper-header.d-flex.align-items-center.mb-30.mb-md-0.mr-auto
+                      img.mr-20(src=about.pdfData.image, alt=about.pdfData.title)
+                      div
+                        h2.suv-about__whitepaper-title.fs-24.mb-0= about.pdfData.title
+                        div= about.pdfData.desc
+                    .suv-about__whitepaper-content.text-center
+                      div
+                        a.btn.btn-suv.btn-gradient(href=about.pdfData.url, target="blank")
+                          span White paper
+

@@ -1,0 +1,27 @@
+.suv-token {
+  &__element {
+    &-ellipse-1 {
+      position: absolute;
+      left: -5%;
+      top: 5%;
+      z-index: 1;
+      border-radius: 100%;
+      width: 675px;
+      height: 314px;
+      background: rgba(255, 0, 199, 0.2);
+      filter: blur(200px);
+    }
+
+    &-ellipse-2 {
+      position: absolute;
+      right: -50%;
+      top: 15%;
+      z-index: 1;
+      border-radius: 100%;
+      width: 675px;
+      height: 314px;
+      background: rgba(112, 0, 255, 0.2);
+      filter: blur(200px);
+    }
+  }
+}

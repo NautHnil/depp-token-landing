@@ -52,7 +52,7 @@ animateWP = function animateWP(target, direction) {
 
 $(window).scroll(function () {
   var scrollDistance = $(window).scrollTop();
-  var perHeight = 35; // The percent value of window height
+  var perHeight = 65; // The percent value of window height
 
   var offsetTop = wHeight / 100 * perHeight; // Assign active class to nav links while scrolling
 
@@ -69,8 +69,10 @@ $(window).scroll(function () {
   });
 
   if (scrollDistance >= 100) {
+    $("nav.navbar").stop().removeClass("bg-transparent").addClass("bg-depp-main-light");
     $("#go-top").stop().addClass("show");
   } else {
+    $("nav.navbar").stop().removeClass("bg-depp-main-light").addClass("bg-transparent");
     $("#go-top").stop().removeClass("show");
   }
 }).scroll();

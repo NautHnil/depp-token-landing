@@ -1,9 +1,12 @@
 .navbar {
   height: $header-sm;
+  z-index: 9;
 
-  @include rem((
-    padding: 0px 16px,
-  ));
+  @include rem(
+    (
+      padding: 0px 16px,
+    )
+  );
   @include media-breakpoint-up(md) {
     height: $header;
   }
@@ -16,13 +19,17 @@
     }
 
     img {
-      @include rem((
-        max-height: 30px,
-      ));
+      @include rem(
+        (
+          max-height: 30px,
+        )
+      );
       @include media-breakpoint-up(lg) {
-        @include rem((
-          max-height: 44px,
-        ));
+        @include rem(
+          (
+            max-height: 44px,
+          )
+        );
       }
     }
   }
@@ -41,15 +48,19 @@
     box-shadow: none;
     overflow: hidden;
 
-    @include rem((
-      width: 25px,
-      height: 25px
-    ));
+    @include rem(
+      (
+        width: 25px,
+        height: 25px,
+      )
+    );
     @include media-breakpoint-up(md) {
-      @include rem((
-        width: 31px,
-        height: 31px,
-      ));
+      @include rem(
+        (
+          width: 31px,
+          height: 31px,
+        )
+      );
     }
 
     &::before,
@@ -60,12 +71,14 @@
       width: 100%;
       background-color: $suv-text-secondary;
 
-      @include rem((
-        height: 3px,
-        border-radius: 3px,
-        margin: 3px 0,
-      ));
-      @include transition(all .25s ease);
+      @include rem(
+        (
+          height: 3px,
+          border-radius: 3px,
+          margin: 3px 0,
+        )
+      );
+      @include transition(all 0.25s ease);
     }
 
     &::before {
@@ -88,11 +101,13 @@
       margin: auto 0 auto auto;
       background-color: $suv-text-secondary;
 
-      @include rem((
-        height: 3px,
-        border-radius: 10px,
-      ));
-      @include transition(all .5s ease);
+      @include rem(
+        (
+          height: 3px,
+          border-radius: 10px,
+        )
+      );
+      @include transition(all 0.5s ease);
     }
 
     &:not(.collapsed) {
@@ -135,9 +150,11 @@
 
   .navbar-nav {
     @extend .shadow-sm;
-    @include rem((
-      padding: 16px 20px,
-    ));
+    @include rem(
+      (
+        padding: 16px 20px,
+      )
+    );
     @include media-breakpoint-up(lg) {
       box-shadow: none !important;
       max-width: none;
@@ -182,16 +199,20 @@
     position: relative;
     color: $suv-text-primary;
 
-    @include rem((
-      padding-top: 15px,
-      padding-bottom: 15px,
-    ));
+    @include rem(
+      (
+        padding-top: 15px,
+        padding-bottom: 15px,
+      )
+    );
 
     @include media-breakpoint-up(lg) {
-      @include rem((
-        padding: 18px 0 !important,
-        margin: 0 20px !important,
-      ));
+      @include rem(
+        (
+          padding: 18px 0 !important,
+          margin: 0 20px !important,
+        )
+      );
     }
 
     &::after {
@@ -202,7 +223,7 @@
       background-color: $suv-main-red;
 
       @include absolute(null, 0, 0);
-      @include transition(all .5s ease);
+      @include transition(all 0.5s ease);
       @include vhidden();
       @include media-breakpoint-up(lg) {
         display: block;
@@ -224,9 +245,11 @@
 
   .dropdown {
     img {
-      @include rem((
-        height: 20px,
-      ));
+      @include rem(
+        (
+          height: 20px,
+        )
+      );
     }
 
     &-toggle {
@@ -240,23 +263,29 @@
     &-menu {
       border-color: $suv-divider-1;
 
-      @include rem((
-        padding: 10px 0,
-      ));
+      @include rem(
+        (
+          padding: 10px 0,
+        )
+      );
       @include media-breakpoint-up(lg) {
-        @include rem((
-          min-width: 130px,
-          margin-left: -12px,
-        ));
+        @include rem(
+          (
+            min-width: 130px,
+            margin-left: -12px,
+          )
+        );
       }
     }
 
     &-item {
       color: $suv-text-primary;
 
-      @include rem((
-        padding: 10px 20px,
-      ));
+      @include rem(
+        (
+          padding: 10px 20px,
+        )
+      );
 
       &:hover {
         color: inherit;

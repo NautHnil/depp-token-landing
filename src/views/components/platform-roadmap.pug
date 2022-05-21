@@ -3,21 +3,17 @@ include ../stores/tbPlatformRoadmap
 include ./heading
 include ../mixins/list
 
-.suv-platform.py-70.py-xl-100
+.suv-platform.pt-70.pt-xl-100
   .container
     div(data-waypoints="init", data-effect="fadeInUp")
-      +heading("text-center mb-50 mb-lg-60", "Roadmap", "text-capitalize fs-40 fs-md-32 fs-lg-50 mb-10")
+      +heading("text-center mb-50 mb-lg-60", "Roadmap", "text-capitalize text-white fs-40 fs-md-32 fs-lg-50 mb-10")
 
     .suv-platform__content
       .row
         each item, index in tbPlatformRoadmap
-          div.d-flex(class=`${index === tbPlatformRoadmap.length - 1 ? "col-md-12 col-lg-4" : "col-md-6 col-lg-4"}`)
-            .suv-platform__roadmap.rounded-lg.p-30.mb-50.mb-lg-0.mt-3.w-100(data-waypoints="init", data-effect="fadeInLeft")
-              .suv-platform__roadmap-header.mb-20
-                h3.fs-24.text-suv-main-red.d-inline-block.mr-2= item.year
-                .fs-18.font-weight-medium.d-inline-block= item.month
-                .suv-platform__roadmap-icon
-                  img(src="./assets/images/icon-11.svg", alt="Platform Roadmap")
+          .col-md-6.mb-50.mb-lg-80
+            .suv-platform__roadmap(data-waypoints="init", data-effect="fadeInLeft")
+              .suv-platform__roadmap-header.mb-32.pb-24
+                h3.fs-32.fs-lg-40.text-uppercase.text-white.lh-1.d-inline-block.mb-0= item.title
 
-              +list(item.content, "suv-platform__content mb-0", "fa fa-star mr-2 fs-12 text-suv-main-orange")
-
+              +list(item.content, "suv-platform__content mb-0", "fa fa-circle mr-2 fs-8 text-depp-pink")

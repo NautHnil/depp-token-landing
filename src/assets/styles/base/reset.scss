@@ -28,6 +28,10 @@ img {
   border-radius: $border-radius-md !important;
 }
 
+#site {
+  overflow: hidden;
+}
+
 // Width %
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

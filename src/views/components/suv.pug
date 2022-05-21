@@ -7,63 +7,21 @@ include ../atoms/cardItem
   var whyUs = tbSUV.whyUs;
   var howDoWeWork = tbSUV.howDoWeWork;
 
-.suv-box.py-70.py-xl-100
+.suv-box.pt-70.pt-xl-100
   .container
     div(data-waypoints="init", data-effect="fadeInUp")
-      +heading("text-center mb-50 mb-lg-60", "DEPPTOKEN", "fs-40 fs-md-32 fs-lg-50 mb-10", "Short-term Trading for Ultimate Value")
+      +heading("text-center mb-50 mb-lg-60", "Exploring the Pirate Metaverse", "text-white fs-40 fs-md-32 fs-lg-50 mb-10")
 
-    //- Who Are We
-    .suv-box__section.mb-50
-      .mb-60
-        .row.align-items-center
-          .col-lg-6.order-lg-last.text-center(data-waypoints="init", data-effect="fadeInRight")
-            img.suv-box-heading__img.mb-50.mb-lg-0(src=whoAreWe.image, alt=whoAreWe.title)
+    .suv-box__section
+      .suv-box__element
+        .suv-box__element-ellipse-1
+        .suv-box__element-ellipse-2
+        .suv-box__element-bg(style=`background-image: url(./assets/images/skull.png);`)
+      .row.align-items-center
+        .col-lg-6.text-center(data-waypoints="init", data-effect="fadeInLeft")
+          img.suv-box-heading__img.mb-50.mb-lg-0(src="./assets/images/treasure-map.png", alt="Treasure Map")
 
-          .col-lg-6.order-lg-first(data-waypoints="init", data-effect="fadeInLeft")
-            .suv-box-heading
-              h2.suv-box-heading__title.fs-40.fs-md-32.fs-lg-50.mb-30= whoAreWe.title
-              .suv-box-heading__desc= whoAreWe.desc
-
-      .row.row-cols-1.row-cols-md-3
-        each item in whoAreWe.suvData
-          .col
-            .h-100.pb-30(data-waypoints="init", data-effect="fadeInUp")
-              +cardItem("suv-box-card p-30 rounded-lg h-100", "p-0", item.image, "mb-30", item.title, "fs-20 mb-2", item.desc, "")
-
-    //- Why Us
-    .suv-box__section.mb-50
-      .mb-60
-        .row.align-items-center
-          .col-lg-6.text-center(data-waypoints="init", data-effect="fadeInLeft")
-            img.suv-box-heading__img.mb-50.mb-lg-0(src=whyUs.image, alt=whyUs.title)
-
-          .col-lg-6(data-waypoints="init", data-effect="fadeInRight")
-            .suv-box-heading
-              h2.suv-box-heading__title.fs-40.fs-md-32.fs-lg-50.mb-30= whyUs.title
-              .suv-box-heading__desc= whyUs.desc
-
-      .row.row-cols-1.row-cols-md-2
-        each item in whyUs.suvData
-          .col
-            .h-100.pb-30(data-waypoints="init", data-effect="fadeInUp")
-              +cardItem("suv-box-card p-30 rounded-lg h-100", "p-0", item.image, "mb-30", item.title, "fs-20 mb-2", item.desc, "")
-
-    //- How Do We Work
-    .suv-box__section.mb-50
-      .mb-60
-        .row.align-items-center
-          .col-lg-6.order-lg-last.text-center(data-waypoints="init", data-effect="fadeInRight")
-            img.suv-box-heading__img.mb-50.mb-lg-0(src=howDoWeWork.image, alt=howDoWeWork.title)
-
-          .col-lg-6.order-lg-first(data-waypoints="init", data-effect="fadeInLeft")
-            .suv-box-heading
-              h2.suv-box-heading__title.fs-40.fs-md-32.fs-lg-50.mb-30= howDoWeWork.title
-              .suv-box-heading__desc= howDoWeWork.desc
-
-      .border.rounded-lg.py-30.bg-white(data-waypoints="init", data-effect="fadeInUp")
-        .d-flex.flex-column.flex-lg-row
-          each item, index in howDoWeWork.suvData
-            .card.border-0.rounded-0.bg-transparent(class=`${index == (howDoWeWork.suvData.length-1) ? "" : " mb-50 mb-lg-0"}`)
-              .card-body.p-0
-                h3.card-title.fs-20.px-30.mb-12= item.title
-                .card-text.px-30(class=`${index == (howDoWeWork.suvData.length-1) ? "" : " border-right"}`)= item.desc
+        .col-lg-6(data-waypoints="init", data-effect="fadeInRight")
+          .suv-box-heading
+            h2.suv-box-heading__title.text-white.fs-28.fs-md-32.mb-3 Treasure MAP
+            .suv-box-heading__desc Depp Coin will set up its Metaverse in the future and its black market, where you can sell your tokens to various anonymous creatures from the outer world. The first owners of Depp Token will be able to look for mystery islands, discover treasures, build their naval army and rule an empire of prosperity that lasts for eternity.
