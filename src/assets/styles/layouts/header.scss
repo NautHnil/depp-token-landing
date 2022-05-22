@@ -146,6 +146,11 @@
       padding-top: 0;
       z-index: 1;
     }
+
+    &.collapsing .navbar-nav,
+    &.show .navbar-nav {
+      background-color: $depp-main-light;
+    }
   }
 
   .navbar-nav {
