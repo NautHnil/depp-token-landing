@@ -62,3 +62,153 @@
     );
   }
 }
+
+.suv-section {
+  overflow: hidden;
+}
+
+*:root {
+  --rgbText: 255 255 255;
+  --durationXS: 200ms;
+  --durationS: 300ms;
+  --durationM: 400ms;
+  --durationL: 600ms;
+  --durationXL: 800ms;
+}
+
+@keyframes intro-scroll-indicator {
+  0% {
+    transform: translate3d(-1px, 0, 0);
+    opacity: 0;
+  }
+  20% {
+    transform: translate3d(-1px, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-1px, 8px, 0);
+    opacity: 0;
+  }
+}
+
+.intro__scroll-indicator {
+  display: none;
+  border: 2px solid rgb(var(--rgbText) / 0.4);
+  border-radius: 20px;
+  width: 26px;
+  height: 38px;
+  position: absolute;
+  bottom: 0;
+  transition-property: opacity;
+  transition-duration: var(--durationL);
+  transition-timing-function: ease;
+  opacity: 0;
+
+  &::before {
+    content: "";
+    height: 7px;
+    width: 2px;
+    background: rgb(var(--rgbText) / 0.4);
+    border-radius: 4px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-1px);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      transition-property: opacity, transform;
+    }
+
+    &::before {
+      animation: intro-scroll-indicator 2s ease infinite;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.intro__scroll-indicator--entered {
+  opacity: 1;
+}
+
+.intro__scroll-indicator--hidden {
+  opacity: 0;
+
+  @media (prefers-reduced-motion: no-preference) {
+    & {
+      transform: translate3d(0, 20px, 0);
+    }
+  }
+}
+
+.suv-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__ellipse {
+    position: absolute;
+    z-index: 1;
+    border-radius: 100%;
+    width: 675px;
+    height: 314px;
+
+    &-1 {
+      left: 20%;
+      top: 15%;
+      background: rgba(112, 0, 255, 0.4);
+      filter: blur(150px);
+    }
+
+    &-2 {
+      right: 17%;
+      top: 8%;
+      background: rgba(255, 0, 199, 0.4);
+      filter: blur(150px);
+    }
+
+    &-3 {
+      left: 50%;
+      top: 75%;
+      background: rgba(255, 0, 0, 0.2);
+      filter: blur(200px);
+      transform: translate(-50%, -50%);
+    }
+
+    &-4 {
+      right: -25%;
+      top: 80%;
+      background: rgba(112, 0, 255, 0.4);
+      filter: blur(200px);
+    }
+
+    &-5 {
+      left: 5%;
+      top: 125%;
+      background: rgba(255, 0, 199, 0.2);
+      filter: blur(200px);
+    }
+
+    &-6 {
+      right: -15%;
+      top: 125%;
+      background: rgba(112, 0, 255, 0.2);
+      filter: blur(200px);
+    }
+
+    &-7 {
+      left: 50%;
+      bottom: -2500px;
+      background: rgba(255, 0, 199, 0.2);
+      filter: blur(200px);
+      transform: translateX(-50%);
+    }
+  }
+}

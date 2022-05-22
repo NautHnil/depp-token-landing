@@ -24,29 +24,5 @@
       background-repeat: repeat-x;
       background-position: top center;
     }
-
-    &-ellipse-1 {
-      position: absolute;
-      left: 15%;
-      bottom: 0;
-      z-index: 1;
-      border-radius: 100%;
-      width: 675px;
-      height: 314px;
-      background: rgba(112, 0, 255, 0.4);
-      filter: blur(150px);
-    }
-
-    &-ellipse-2 {
-      position: absolute;
-      right: 15%;
-      bottom: 25%;
-      z-index: 1;
-      border-radius: 100%;
-      width: 675px;
-      height: 314px;
-      background: rgba(255, 0, 199, 0.4);
-      filter: blur(150px);
-    }
   }
 }

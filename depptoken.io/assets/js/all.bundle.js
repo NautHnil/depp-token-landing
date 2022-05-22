@@ -71,9 +71,21 @@ $(window).scroll(function () {
   if (scrollDistance >= 100) {
     $("nav.navbar").stop().removeClass("bg-transparent").addClass("bg-depp-main-light");
     $("#go-top").stop().addClass("show");
+    $(".intro__scroll-indicator").stop().addClass("intro__scroll-indicator--hidden");
   } else {
     $("nav.navbar").stop().removeClass("bg-depp-main-light").addClass("bg-transparent");
     $("#go-top").stop().removeClass("show");
+    $(".intro__scroll-indicator").stop().removeClass("intro__scroll-indicator--hidden");
   }
 }).scroll();
+$(document).ready(function () {
+  $("[data-scroll-parallax='init']").scrollParallax({
+    random: true,
+    randomRange: {
+      min: 10,
+      max: 60
+    },
+    threshold: 2
+  });
+});
 //# sourceMappingURL=maps/all.bundle.js.map

@@ -9,6 +9,7 @@ $white: #ffffff;
 $depp-main: #11011e;
 $depp-main-light: lighten($depp-main, 10%);
 $depp-light-70: rgba(#fff, 0.7);
+$depp-light-20: rgba(#fff, 0.2);
 $depp-light-08: rgba(#fff, 0.08);
 $depp-light-05: rgba(#fff, 0.05);
 $depp-pink: #d539c2;
@@ -54,6 +55,7 @@ $arr-colors-name: (
   "depp-main": $depp-main,
   "depp-main-light": $depp-main-light,
   "depp-light-70": $depp-light-70,
+  "depp-light-20": $depp-light-20,
   "depp-light-08": $depp-light-08,
   "depp-light-05": $depp-light-05,
   "depp-pink": $depp-pink,
@@ -239,6 +241,7 @@ $mp: map-merge(
     90: calc(90 / $font-root * $spacer),
     100: calc(100 / $font-root * $spacer),
     105: calc(105 / $font-root * $spacer),
+    150: calc(150 / $font-root * $spacer),
     210: calc(210 / $font-root * $spacer)
   ),
   $mp

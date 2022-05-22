@@ -51,13 +51,14 @@
         <main class="site-main" id="main" role="main">
             <section class="suv-section" id="hero">
                 <div class="suv-hero">
-                    <div class="suv-hero__wrap">
+                    <div class="suv-hero__wrap position-relative">
+                        <div class="position-absolute" style="bottom: 0; left: 50%; transform: translateX(-50%)">
+                            <div class="intro__scroll-indicator intro__scroll-indicator--entered"></div>
+                        </div>
                         <div class="suv-hero__element">
-                            <div class="suv-hero__element-ellipse-1"></div>
-                            <div class="suv-hero__element-ellipse-2"></div>
                             <div class="suv-hero__element-bg" style="background-image: url(./assets/images/stars.svg);"></div>
                         </div>
-                        <div class="suv-hero__wrap-main py-70 py-lg-210">
+                        <div class="suv-hero__wrap-main py-70 py-lg-150 py-xl-210">
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6 order-lg-last">
@@ -66,10 +67,10 @@
                                     <div class="col-lg-6 order-lg-first">
                                         <div class="suv-hero__content text-center text-lg-left" data-waypoints="init" data-effect="zoomIn">
                                             <div class="suv-heading suv-heading--no-line text-white text-center text-lg-left mb-0">
-                                                <h2 class="suv-heading__title fs-32 fs-lg-50 mb-3 lg:mb-0">THE DEPP MEME COIN</h2>
+                                                <h2 class="suv-heading__title fs-32 fs-xl-50 mb-3 lg:mb-0">THE DEPP MEME COIN</h2>
                                             </div>
                                             <div class="font-weight-medium text-white">The DEPP Token is a community driven DeFi Cryptocyrrency, with the aim to become the Captain of all Meme Coin!</div>
-                                            <div class="suv-about__whitepaper shadow-lg rounded-lg border border-depp-light-70 mt-4 p-30 px-md-3 py-md-4 p-lg-30 d-flex flex-column flex-md-row align-items-center" data-waypoints="init" data-effect="fadeInRight">
+                                            <div class="suv-about__whitepaper shadow-lg rounded-lg border border-depp-light-20 mt-4 p-30 px-md-3 py-md-4 p-lg-30 d-flex flex-column flex-md-row align-items-center" data-waypoints="init" data-effect="fadeInRight">
                                                 <div class="suv-about__whitepaper-header d-flex align-items-center mb-30 mb-md-0 mr-auto"><img class="mr-20" src="./assets/images/icon-1.svg" alt="White paper">
                                                     <div>
                                                         <h2 class="suv-about__whitepaper-title fs-24 mb-0">White paper</h2>
@@ -152,8 +153,6 @@
                         </div>
                         <div class="suv-box__section">
                             <div class="suv-box__element">
-                                <div class="suv-box__element-ellipse-1"></div>
-                                <div class="suv-box__element-ellipse-2"></div>
                                 <div class="suv-box__element-bg" style="background-image: url(./assets/images/skull.png);"></div>
                             </div>
                             <div class="row align-items-center">
@@ -242,10 +241,6 @@
                             </div>
                         </div>
                         <div class="suv-token__content position-relative">
-                            <div class="suv-token__element">
-                                <div class="suv-token__element-ellipse-1"></div>
-                                <div class="suv-token__element-ellipse-2"></div>
-                            </div>
                             <div class="row mb-70 mb-lg-100">
                                 <div class="col-md-6 col-lg-3 mb-24">
                                     <div class="text-center border border-depp-light-05 py-24 px-3 rounded-lg" data-waypoints="init" data-effect="fadeInUp" style="backdrop-filter: blur(8px); background: rgba(255, 255, 255, 0.08);">
@@ -304,16 +299,23 @@
             </section>
         </main>
         <footer class="suv-footer py-40 position-relative">
-            <div class="suv-footer__element">
-                <div class="suv-footer__element-ellipse-1"></div>
-            </div>
             <div class="text-center fs-14">Copyright &copy; 2022 DEPPTOKEN – All rights reserved</div>
         </footer>
         <div class="rounded-circle" id="go-top"><a class="d-block fs-0" href="#"><img src="/assets/images/back-top.png" alt="Back to top"></a></div>
+        <div class="suv-element">
+            <div class="suv-element__ellipse suv-element__ellipse-1" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-2" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-3" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-4" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-5" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-6" data-scroll-parallax="init"></div>
+            <div class="suv-element__ellipse suv-element__ellipse-7" data-scroll-parallax="init"></div>
+        </div>
     </div>
     <script src="./assets/libraries/common/popper.min.js"></script>
     <script src="./assets/libraries/common/bootstrap.min.js"></script>
     <script src="./assets/libraries/waypoints/jquery.waypoints.min.js"></script>
+    <script src="./assets/libraries/scrollParallax.js"></script>
     <script src="./assets/js/all.bundle.js"></script>
 </body>
 
