@@ -43,11 +43,10 @@ animateWP = function animateWP(target, direction) {
 
   if (direction === "down") {
     $(target).addClass("animated " + effect);
-  }
+  } // if (direction === "up") {
+  //   $(target).removeClass("animated " + effect);
+  // }
 
-  if (direction === "up") {
-    $(target).removeClass("animated " + effect);
-  }
 };
 
 $(window).scroll(function () {

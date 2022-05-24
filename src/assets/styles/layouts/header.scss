@@ -148,7 +148,9 @@
     }
 
     &.collapsing .navbar-nav,
-    &.show .navbar-nav {
+    &.show .navbar-nav,
+    &.collapsing .navbar-nav-social,
+    &.show .navbar-nav-social {
       background-color: $depp-main-light;
     }
   }
@@ -180,6 +182,14 @@
             @include vhidden();
           }
         }
+      }
+    }
+
+    &-social {
+      border-top: 1px solid $depp-light-20;
+
+      @include media-breakpoint-up(lg) {
+        border-top: none;
       }
     }
   }

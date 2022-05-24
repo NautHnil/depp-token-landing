@@ -54,9 +54,9 @@ animateWP = (target, direction) => {
     $(target).addClass("animated " + effect);
   }
 
-  if (direction === "up") {
-    $(target).removeClass("animated " + effect);
-  }
+  // if (direction === "up") {
+  //   $(target).removeClass("animated " + effect);
+  // }
 };
 
 $(window)

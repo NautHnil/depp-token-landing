@@ -1,0 +1,11 @@
+//- Social Networks
+include ../stores/tbSocials
+
+ul.navbar-nav-social.py-0.px-3.mb-0
+  each social in tbSocials
+    li.nav-item.d-inline-block.w-auto
+      a.d-block.text-depp-light-70.text-hover-suv-main-red.fs-20.mx-2(href=social.href, target="_blank", style="padding: 1.125rem 0;")
+        if social.icon
+          i(class=social.icon)
+        else
+          span= social.title
